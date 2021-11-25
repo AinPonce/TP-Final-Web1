@@ -1,25 +1,43 @@
-const provincia = [
-    {id: 1, name: "Buenos Aires"},
-    {id: 2, name:"Misiones"},
-    {id: 3, name:"San Juan"},
-    {id: 4, name:"Salta"
-    }];
+let departamentos = ["Buenos Aires","Misiones", "San Juan", "Salta"];
 
-const establecimiento = [
-    {id: 1, name:"San Justo"},
-    {id: 1, name:"Casanova"},
-    {id: 1, name:"Ramos Mejia"},
-    {id: 1, name:"Belgrano"},
-    {id: 2, name:"Posadas"},
-    {id: 2, name:"Apostoles"},
-    {id: 2, name:"Eldorado"},
-    {id: 2, name:"Montecarlo"},
-    {id: 3, name:"Rawson"},
-    {id: 3, name:"Rivadavia"},
-    {id: 3, name:"Chimbas"},
-    {id: 3, name:"Gaucete"},
-    {id: 4, name:"La Viña"},
-    {id: 4, name:"Iruya"},
-    {id: 4, name:"Cafayae"},
-    {id: 4, name:"Molinos"
-}];
+let distritos = ["Belgrano","Ramos Mejia", "San Justo","Casanova",
+"Posadas","Apostoles","Candelaria","El Dorado","Jorge Chaves","Agustino",
+"La Molina","Puente Piedra","Jesus De Maria","Metro","Sona Trujillo","Huanchaco"];
+
+      let combobox1 = document.getElementById("combobox1");
+      let combobox2 = document.getElementById("combobox2");
+
+      function Recorrer(combobox, valores) {
+        combobox2.innerHTML = "";
+        for (let index of valores) {
+          combobox.innerHTML += `
+                <option>${index}</option>
+                `;
+        }
+      }
+
+      function llenarDepar() {
+        Recorrer(combobox1, departamentos);
+      }
+      llenarDepar();
+
+      combobox1.addEventListener("change", (e) => {
+        let dato = e.target.value;
+
+        switch (dato) {
+          case "Buenos Aires":
+            Recorrer(combobox2, distritos.slice(0, 4));
+            break;
+          case "Misiones":
+            Recorrer(combobox2, distritos.slice(5, 8));
+            break;
+          case "San Juan":
+            Recorrer(combobox2, distritos.slice(9, 12));
+            break;
+            case "Salta":
+                Recorrer(combobox2, distritos.slice(10, 16));
+                break;  
+          default:
+            break;
+        }
+      });
