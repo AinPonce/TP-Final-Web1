@@ -12,8 +12,9 @@ let fichaEstablecimiento = {
         localidad:"CABA",
         provincia:"Buenos Aires",
         email:"establecimientoBelgrano@gmail.com",
-        horario: ["Seleccionar un horario", "Lunes a Viernes de 8 a 17hs", , "Martes y Miercoles de 8 a 17hs"],
-        idioma: ["Seleccionar Idioma", "Ingles", "Portugues"]
+        horario: ["Lunes a Viernes de 8 a 17hs",  "Martes y Miercoles de 8 a 17hs"],
+        idioma: ["Ingles", "Portugues"],
+        precio: ["$7000", "$3200"]
     },
 
     "Ramos Mejia":{
@@ -21,8 +22,9 @@ let fichaEstablecimiento = {
         localidad:"La Matanza",
         provincia:"Buenos Aires",
         email:"establecimientoRamosMejia@gmail.com",
-        horario: ["Seleccionar un horario", "Lunes a Viernes de 8 a 17hs", , "Martes y Miercoles de 8 a 17hs"],
-        idioma: ["Seleccionar Idioma", "Portugues"]
+        horario: [ "Lunes a Viernes de 8 a 17hs", "Martes y Miercoles de 8 a 17hs"],
+        idioma: ["Portugues"],
+        precio: ["$8000"]
     },
 
     "Apostoles":{
@@ -30,8 +32,9 @@ let fichaEstablecimiento = {
         localidad:"Campo Grande",
         provincia:"Misiones",
         email:"establecimientoApostoles@gmail.com",
-        horario: ["Seleccionar un horario", "Lunes a Viernes de 8 a 17hs", , "Martes y Miercoles de 8 a 17hs"],
-        idioma: ["Seleccionar Idioma", "Aleman", "Portugues"]
+        horario: ["Lunes a Viernes de 8 a 17hs","Martes y Miercoles de 8 a 17hs"],
+        idioma: ["Aleman", "Portugues"],
+        precio: ["$9000", "$3500"]
     },
     
     "Candelaria":{
@@ -39,8 +42,9 @@ let fichaEstablecimiento = {
         localidad:"Posadas",
         provincia:"Misiones",
         email:"establecimientoCandelaria@gmail.com",
-        horario: ["Seleccionar un horario", "Lunes a Viernes de 8 a 17hs", , "Martes y Miercoles de 8 a 17hs"],
-        idioma: ["Seleccionar Idioma", "Aleman", "Frances", "Portugues"]
+        horario: ["Lunes a Viernes de 8 a 17hs", "Martes y Miercoles de 8 a 17hs"],
+        idioma: ["Aleman", "Frances", "Portugues"],
+        precio: ["$100000", "$5000", "3000"]
     },
 
     "Agustino":{
@@ -48,8 +52,9 @@ let fichaEstablecimiento = {
         localidad:"Caucete",
         provincia:"San Juan",
         email:"establecimientoAgustino@gmail.com",
-        horario: ["Seleccionar un horario", "Lunes a Viernes de 8 a 17hs", , "Martes y Miercoles de 8 a 17hs"],
-        idioma: ["Seleccionar Idioma", "Portugues"]
+        horario: ["Lunes a Viernes de 8 a 17hs", "Martes y Miercoles de 8 a 17hs"],
+        idioma: ["Portugues"],
+        precio: ["$5000"]
     },
 
     "La Molina":{
@@ -57,9 +62,9 @@ let fichaEstablecimiento = {
         localidad:"Villa Aberastain",
         provincia:"San Juan",
         email:"establecimientoLaMolina@gmail.com",
-        idioma: "Ingles",
-        horario: ["Seleccionar un horario", "Lunes a Viernes de 8 a 17hs", , "Martes y Miercoles de 8 a 17hs"],
-        idioma: ["Seleccionar Idioma", "Ingles", "Portugues"]
+        horario: ["Lunes a Viernes de 8 a 17hs","Martes y Miercoles de 8 a 17hs"],
+        idioma: ["Ingles", "Portugues"],
+        precio: ["$3000","$4000"]
     },
 
     "Metro":{
@@ -67,9 +72,9 @@ let fichaEstablecimiento = {
         localidad:"Cafayate",
         provincia:"Salta",
         email:"establecimientoMetro@gmail.com",
-        idioma: "Aleman",
-        horario: ["Seleccionar un horario", "Lunes a Viernes de 8 a 17hs", , "Martes y Miercoles de 8 a 17hs"],
-        idioma: ["Seleccionar Idioma", "Ingles", "Portugues"]
+        horario: ["Lunes a Viernes de 8 a 17hs", "Martes y Miercoles de 8 a 17hs"],
+        idioma: ["Ingles", "Portugues"],
+        precio: ["$7500","$3000"]
     },
 
     "Sona Trujillo":{
@@ -77,9 +82,9 @@ let fichaEstablecimiento = {
         localidad:"General Guemes",
         provincia:"Salta",
         email:"establecimientoSonaTrujillo@gmail.com",
-        idioma: "Frances",
-        horario: ["Seleccionar un horario", "Lunes a Viernes de 8 a 17hs", , "Martes y Miercoles de 8 a 17hs"],
-        idioma: ["Seleccionar Idioma", "Ingles", "Portugues"] 
+        horario: ["Lunes a Viernes de 8 a 17hs",  "Martes y Miercoles de 8 a 17hs"],
+        idioma: ["Ingles", "Portugues"],
+        precio: ["$2000","$3000"]
     },
 }
 
@@ -124,8 +129,9 @@ let combobox5 = document.getElementById("combobox5");
         document.getElementById("fProvincia").innerHTML = "Provincia: "+prop["provincia"];
         document.getElementById("fEmail").innerHTML = "Email: "+prop["email"];
 
-        Recorrer(combobox3, prop["idiomas"]);
-        Recorrer(combobox4, prop["horarios"]);
+        Recorrer(combobox3, prop["idioma"]);
+        Recorrer(combobox4, prop["horario"]);
+        document.getElementById("combobox5").innerHTML = "El precio es: "+prop["precio"];
     })
 
 
