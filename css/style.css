@@ -1,0 +1,442 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  font-size: 70%;
+  background-color: rgb(201, 201, 201);
+}
+
+.logo {
+  display: inline;
+  width: 10%;
+  height: auto;
+}
+
+.logoImg {
+  width: 100%;
+  height: auto;
+}
+
+.navbar-expand-lg .navbar-nav {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-item,
+.nav-link {
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#carouselExampleControls {
+  margin-top: 1em;
+}
+
+.titulo {
+  font-size: 2em;
+  color: #457b9d;
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.contenedor-clases {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-clases {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.7em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  background-color: white;
+  box-shadow: -7px 12px 29px -5px rgba(0, 0, 0, 0.63);
+}
+
+.imgCursos {
+  display: block;
+  width: 50%;
+  border-radius: 100%;
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+
+.botonContenedorCurso {
+  text-decoration: none;
+  width: 9em;
+  background-color: #1d3557;
+  color: white;
+  border-radius: 0.5em;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+.botonContenedorCurso:hover {
+  text-decoration: none;
+  width: 9em;
+  background-color: #101d30;
+  color: white;
+  border-radius: 0.5em;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+.divA {
+  margin-bottom: 2em;
+}
+
+.mapa {
+  display: block;
+  width: 80%;
+  height: auto;
+  align-items: center;
+  border: none;
+  border-radius: 0.3em;
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+
+.mapa-secundario{
+  width: 70%;
+  display: block;
+  border-radius: 0.3em;
+  margin-top: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cards-clases ul {
+  list-style: none;
+}
+
+.cards-clases ul li {
+  margin-top: 1em;
+}
+
+#opciones {
+  text-align: left;
+  color: #457b9d;
+}
+
+select {
+  width: 70%;
+  height: 1.56em;
+  border-radius: 0.312em;
+  margin-top: 0.625em;
+  margin-bottom: 0.625em;
+}
+
+.seleccionDeProvicia li {
+  list-style: none;
+  margin: 0.625em;
+}
+
+.seleccionDeProvicia {
+  text-align: center;
+  color: #f1faee;
+  margin-bottom: 2em;
+}
+
+.precioCurso {
+  border-radius: 0.3em;
+  border: none;
+  height: 1.56em;
+}
+
+footer {
+  background-color: #457b9d;
+}
+.seleccionDeProvicia img {
+  width: 10%;
+  padding: 0.2em;
+}
+
+.seleccionDeProvicia ul li a {
+  color: #f1faee;
+  text-decoration: none;
+}
+
+/*ESTABLECIMIENTO*/
+
+.contenedor-clases {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.cards-clases-establecimiento {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.7em;
+  margin-bottom: 1.5em;
+  background-color: white;
+  box-shadow: -7px 12px 29px -5px rgba(0, 0, 0, 0.63);
+}
+
+.establecimientoBuscar {
+  text-align: center;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 2em;
+  border: 1px solid grey;
+  border-radius: 0.5em;
+}
+
+.establecimientoBuscar input {
+  padding: 0.7em 1em;
+  width: 100%;
+  border-radius: 0.5em;
+  border: none;
+  margin-right: 0.5em;
+  align-items: center;
+}
+
+.lupa {
+  width: 3em;
+  height: auto;
+  margin-left: 0.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.contenedor-establecimientos {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: left;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.cards-establecimientos {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: left;
+  margin-top: 1em;
+}
+.cards-clases-establecimiento ul {
+  text-align: left;
+  margin-right: 5em;
+}
+
+.cards-clases-establecimiento ul li {
+  list-style: none;
+  margin-left: 1em;
+  margin-top: 0.8em;
+  font-weight: bold;
+  margin-top: 2em;
+}
+
+.imagenEstablecimiento {
+  margin-left: 1em;
+  width: 30%;
+  height: 15em;
+}
+
+@media only screen and (min-width: 600px) {
+  /*TABLET*/
+  body {
+    font-size: 80%;
+  }
+
+  .navegacion a {
+    text-decoration: none;
+    font-size: 2em;
+    margin-left: 0.3em;
+  }
+
+  .botonContenedorCurso {
+    text-decoration: none;
+    width: 9em;
+    background-color: #1d3557;
+    color: white;
+    border-radius: 0.5em;
+    padding: 8px 8px 8px 8px;
+    text-align: center;
+  }
+
+  .mapa-secundario{
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contenedor-clases {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .cards-clases{
+    width: 50%;
+  }
+
+  .seleccionDeProvicia li {
+    list-style: none;
+    margin: 1em;
+    font-size: 2em;
+  }
+
+  .seleccionDeProvicia img {
+    width: 10%;
+    padding: 0.2em;
+  }
+
+  .seleccionDeProvicia ul li a {
+    color: #f1faee;
+    text-decoration: none;
+  }
+
+  select {
+    font-size: 1.7em;
+  }
+
+  input {
+    font-size: 1.4em;
+  }
+
+  #opciones {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /*PC*/
+  body {
+    font-size: 100%;
+  }
+
+  .logoImg{
+    margin-left: 2em;
+  }
+
+  .navegacion a {
+    text-decoration: none;
+    font-size: 1em;
+    margin-left: 0.5em;
+  }
+
+  nav ul {
+    margin-right: 10em;
+  }
+
+  nav ul li {
+    margin-right: 0.5em;
+  }
+
+  .cards-clases {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 0.7em;
+    margin-bottom: 1.5em;
+    background-color: white;
+    box-shadow: -7px 12px 29px -5px rgba(0, 0, 0, 0.63);
+  }
+
+  .cards-clases-establecimiento {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.7em;
+    margin-bottom: 1.5em;
+    background-color: white;
+    box-shadow: -7px 12px 29px -5px rgba(0, 0, 0, 0.63);
+  }
+
+  .mapa {
+    width: 50%;
+  }
+
+  .mapa-secundario{
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .botonContenedorCurso {
+    text-decoration: none;
+    width: 9em;
+    background-color: #1d3557;
+    color: white;
+    border-radius: 0.5em;
+    padding: 8px 8px 8px 8px;
+    text-align: center;
+  }
+
+  .contenedor-clases {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:baseline;
+  }
+
+  .seleccionDeProvicia {
+    margin-top: 1em;
+    width: 20em;
+    align-items: center;
+  }
+
+  .seleccionDeProvicia li {
+    list-style: none;
+    margin: 1em;
+    font-size: 1em;
+  }
+
+  .seleccionDeProvicia img {
+    width: 15%;
+    padding: 0.2em;
+  }
+
+  .seleccionDeProvicia ul li a {
+    color: #f1faee;
+    text-decoration: none;
+  }
+
+  select {
+    font-size: 1em;
+    width: 25em;
+  }
+
+  input {
+    font-size: 1em;
+    width: 15em;
+  }
+
+  #opciones {
+    text-align: left;
+  }
+}
