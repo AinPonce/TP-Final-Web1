@@ -132,3 +132,6 @@ let combobox5 = document.getElementById("combobox5");
         Recorrer(combobox4, prop["horario"]);
         document.getElementById("combobox5").innerHTML = "El precio es: "+prop["precio"];
     })
+
+    localStorage.setItem("list", JSON.stringify(departamentos));
+    localStorage.setItem("list", JSON.stringify(fichaEstablecimiento));

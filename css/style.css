@@ -243,6 +243,7 @@ footer {
   justify-content: left;
   margin-top: 1em;
 }
+
 .cards-clases-establecimiento ul {
   text-align: left;
   margin-right: 5em;
@@ -337,6 +338,10 @@ textarea {
   width: 45%;
 }
 
+#ex1{
+  display: none;
+}
+
 /*nosotros*/
 .contenedorDeImagenesYBiografia {
   display: flex;
@@ -362,6 +367,23 @@ textarea {
   flex-wrap: wrap;
   justify-content: end;
   margin-right: 3em;
+}
+
+.primerCurso li{
+  list-style: none;
+  padding-top: 00.5em;
+  text-align: center;
+}
+
+#cardCursos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.7em;
+  margin-bottom: 1.5em;
+  background-color: white;
+  box-shadow: -7px 12px 29px -5px rgba(0, 0, 0, 0.63);
 }
 
 @media only screen and (min-width: 600px) {

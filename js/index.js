@@ -1,5 +1,3 @@
-// Caro
-//Inscripcion
 let regexEmail= /^[a-zA-Z0-9\._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,4}$/;
 let regexNumeros = /^[0-9]{4}\-[0-9]{4}$/;
 let regexLetras = /^[a-zA-Z]+$/;
@@ -10,8 +8,17 @@ $(document).ready(function(){
     });
 
     $("#formContacto").submit(function(e){
-      validar(e);
+      validarContacto(e);
+     });
+
+    contarLetras();
+
+     $("#filtro").click(function(){
+      filtrar();
   });
+
+     openModal();
+
 });
 
 function validar(e){
@@ -47,40 +54,56 @@ function validar(e){
     }
 }
 
-function validarContacto(){
-  let error = fasle;
+function validarContacto(e){
+  let error = false;
   $("#mensaje").empty();
 
-  if($("#nombre").val()==""){
-    error=true;
-    $("#mensaje").append("<p>El nombre es obligatorio</p>")
+    if($("#nombre").val()=="" || !$("#nombre").val().match(regexLetras)){
+      error=true;
+      $("#mensaje").append("<p>El nombre es obligatorio</p>")
+    }
+    if($("#email").val()==""){
+      error=true;
+      $("#mensaje").append("<p>El email es obligatorio</p>")
+    } else {
+      if(!$("#email").val().match(regexEmail)){
+        error=true;
+      $("#mensaje").append("<p>Ingrese un email válido</p>")
+      }
+    }
+  if(error){
+    e.preventDefault();
   }
-  if($("#nombre").val()==""){
-    error=true;
-    $("#mensaje").append("<p>El nombre es obligatorio</p>")
-  }
-  if(!$("#email").val().match(regexEmail)){
-    error=true;
-    $("#mensaje").append("<p>Ingrese un email válido</p>")
- }
- if(!$("#telefono").val().match(regexNumeros)){
-  error=true;
-  $("#mensaje").append("<p>Ingrese un telefono valido</p>")
-}
-if($("#mensajeContacto").length<1000){
-  error=true;
-  $("#mensaje").append("<p>Se ha excedido de caracteres</p>")
-}
-if(error){//si error es verdadero que el envio se detenga
-  e.preventDefault();
-}
 }
 
-$(document).ready(function(){
-  $("#filtro").click(function(){
-      filtrar();
-  });
-});
+function contarLetras(){
+  let longuitudMax = 1000;
+  let caracteres = $("#textArea").val().length;
+
+  $("#contador").html(longuitudMax + " caracteres restantes");
+  $("#textArea").keyup(function(){
+     let caracteresNuevos = longuitudMax - $("#textArea").val().length;
+     $("#contador").html(caracteresNuevos + " caracteres restantes");
+     if(caracteresNuevos <= 10 && caracteresNuevos > 0){
+       $("#contador").css("color","#F00");
+     } else {
+      $("#contador").css("color","#000");
+     }
+
+     if(caracteresNuevos <=0){
+       $("#textArea").keypress(function(){
+         let texto = $("#textArea").val().substr(0,24);
+         $("#textArea").val(texto);
+       })
+     }
+    });
+}
+
+function openModal(){
+  $("#botoncito").click(function(){
+    $("#ex1").modal();
+  })
+}
 
 function filtrar(){
   const provincia=$("#opcionesProv").val();
@@ -88,32 +111,3 @@ function filtrar(){
   $("#cursos article").hide();
   $(`#cursos  .${provincia}.${idioma}`).show();
 }
-
-//localStorage: paso los datos de la home a inscripcion
-
-
-$(document).ready(function(){
-  $("#formHome").submit(function(){
-    guardarDatos();
-  });
-});
-
-function guardarDatos(){
-
-  let idioma=$("#e").val();
-  /*let establecimiento=$("#establecimientoPosta").val();
-  let horario=$("#classHorario").val();
-  let precio=$("#precio").val();*/
-  
-  localStorage.setItem("idioma", idioma);
-  /*localStorage.setItem("establecimiento", establecimiento);
-  localStorage.setItem("horario", horario);
-  localStorage.setItem("precio", precio);*/
-}
-
-$(document).ready(function(){
-  $("#queIdioma").text(localStorage.getItem("idioma"));
-  /*$("#queEstablecimiento").text(localStorage.getItem("establecimiento"));
-  $("#queHorario").text(localStorage.getItem("dato3"));
-  $("#quePrecio").text(localStorage.getItem("dato4"));*/
-  });
