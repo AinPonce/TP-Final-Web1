@@ -18,8 +18,14 @@ $(document).ready(function(){
   });
 
      openModal();
-
 });
+
+$(document).ready(function(){
+     $("#queIdioma").append(localStorage.getItem("idioma"));
+     $("#queEstablecimiento").append(localStorage.getItem("establecimiento"));
+     $("#queHorario").append(localStorage.getItem("horario"));
+     $("#quePrecio").append(localStorage.getItem("precio"));
+})
 
 function validar(e){
     let error=false;
@@ -40,7 +46,7 @@ function validar(e){
     if(!$("#email").val().match(regexEmail)){
        error=true;
        $("#mensaje").append("<p>Ingrese un email válido</p>")
-    }
+    }s
     if($("#provincia").val()==""){
       error=true;
       $("#mensaje").append("<p>La provincia es un campo obligatorio</p>")
@@ -111,3 +117,12 @@ function filtrar(){
   $("#cursos article").hide();
   $(`#cursos  .${provincia}.${idioma}`).show();
 }
+
+$(document).ready(function() {
+  $("#establecimiento").on("keyup", function() {
+    let value = $(this).val().toLowerCase();
+    $("#contenedorClases .innerEstablecimiento").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
