@@ -114,7 +114,7 @@ body {
   margin-top: 1em;
 }
 
-.mapa-secundario{
+.mapa-secundario {
   width: 70%;
   display: block;
   border-radius: 0.3em;
@@ -174,9 +174,9 @@ footer {
   text-decoration: none;
 }
 
-#combobox5{
+#combobox5 {
   width: 50%;
-  color:rgba(0, 0, 0, 0.63);
+  color: rgba(0, 0, 0, 0.63);
 }
 
 /*ESTABLECIMIENTO*/
@@ -264,36 +264,36 @@ footer {
 
 /*INSCRIPCION*/
 
-.informac{
+.informac {
   text-align: center;
 }
-.contentf{
+.contentf {
   background-color: darkgray;
-   border-radius: 0.5em;
+  border-radius: 0.5em;
 
   margin: 2em;
 }
-.contentf input{
+.contentf input {
   display: block;
   padding: 0.3em;
   border-radius: 0.7em;
 }
 
-.error{
+.error {
   color: red;
 }
 
 /*contacto*/
-.divContacto h2{
+.divContacto h2 {
   margin-left: 1em;
 }
 .rowContacto {
   margin-top: 2em;
   padding-top: 4em;
 }
-.divContacto ul li form{
-    text-align: center;
-    width: 100%;
+.divContacto ul li form {
+  text-align: center;
+  width: 100%;
 }
 
 .divContacto ul {
@@ -322,21 +322,47 @@ footer {
   display: block;
 }
 
-
-.rowContacto input, textarea {
+.rowContacto input,
+textarea {
   padding: 0.7em 1em;
   width: 100%;
   border-radius: 0.5em;
-  
+
   align-items: center;
   margin-left: auto;
   margin-right: auto;
 }
 
-#form{
+#form {
   width: 45%;
 }
 
+/*nosotros*/
+.contenedorDeImagenesYBiografia {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.contenedorDeImagenesYBiografia img {
+  height: auto;
+  max-width: 30%;
+  border-radius: 30%;
+  margin-bottom: 1em;
+}
+.contenedorDeProfesor p {
+  border: 4px solid;
+  padding: 20px;
+  text-align: center;
+}
+.contenedorDeParrafo p {
+  text-align: center;
+}
+.seleccion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  margin-right: 3em;
+}
 
 @media only screen and (min-width: 600px) {
   /*TABLET*/
@@ -360,7 +386,7 @@ footer {
     text-align: center;
   }
 
-  .mapa-secundario{
+  .mapa-secundario {
     width: 70%;
     display: block;
     margin-left: auto;
@@ -375,7 +401,7 @@ footer {
     align-items: center;
   }
 
-  .cards-clases{
+  .cards-clases {
     width: 50%;
   }
 
@@ -406,43 +432,51 @@ footer {
   #opciones {
     text-align: left;
   }
-  .informac{
+  .informac {
     text-align: center;
   }
-  .contentf{
-   background-color: darkgray;
-   border-radius: 0.5em;
-   margin: 1em;
-   display: flex;
-   justify-content: space-around;
-   padding-top: 2em;
-   padding-bottom: 2em;
+  .contentf {
+    background-color: darkgray;
+    border-radius: 0.5em;
+    margin: 1em;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2em;
+    padding-bottom: 2em;
   }
-  .contentf input{
+  .contentf input {
     width: 100%;
   }
-  .rowContentf{
+  .rowContentf {
     width: calc(50% - 3em);
   }
-  
-  .contenedorBotonInscripcion{
+
+  .contenedorBotonInscripcion {
     margin-top: 0.5em;
   }
-  .rowContacto{
+  .rowContacto {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .divContacto{
+  .divContacto {
     width: calc(50% - 2em);
   }
 
-  #form{
+  #form {
     width: 50%;
   }
+
+  /*Nosotros*/
+  .contenedorDeImagenesYBiografia img {
+    max-width: 20%;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .contenedorDeProfesor p {
+    display: inline-block;
+  }
 }
-
-
 
 @media screen and (min-width: 768px) {
   /*PC*/
@@ -450,7 +484,7 @@ footer {
     font-size: 100%;
   }
 
-  .logoImg{
+  .logoImg {
     margin-left: 2em;
   }
 
@@ -496,7 +530,7 @@ footer {
     width: 70%;
   }
 
-  .mapa-secundario{
+  .mapa-secundario {
     width: 70%;
     display: block;
     margin-left: auto;
@@ -518,7 +552,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items:baseline;
+    align-items: baseline;
   }
 
   .seleccionDeProvicia {
@@ -556,15 +590,58 @@ footer {
   #opciones {
     text-align: left;
   }
-  .rowContentf{
+  .rowContentf {
     width: calc(33% - 2em);
   }
 
-  #form{
+  #form {
     width: 70%;
   }
+  /*Nosotros*/
+  .contenedorDeImagenesYBiografia {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .contenedorDeImagenesYBiografia img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1em;
+  }
+  .contenedorDeProfesor {
+    margin: 0.5em;
+    width: calc(30% - 0.1em);
+  }
+  .contenedorDeParrafo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .contenedorDeParrafo p {
+    width: calc(45% - 0.1em);
+    margin-bottom: 3em;
+  }
 
+  /*Calendario*/
+
+  #cursos article {
+    width: calc(50% - 0.5em);
+    justify-content: center;
+  }
+  #cursos {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #cursos img {
+    width: 15em;
+    height: 12.5em;
+    border: 1px solid black;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  .seleccion h2 {
+    font-size: 1em;
+  }
 }
-
-
-

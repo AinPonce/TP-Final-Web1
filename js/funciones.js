@@ -1,5 +1,3 @@
-// Caro
-//Inscripcion
 let regexEmail= /^[a-zA-Z0-9\._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,4}$/;
 let regexNumeros = /^[0-9]{4}\-[0-9]{4}$/;
 let regexLetras = /^[a-zA-Z]+$/;
@@ -42,6 +40,10 @@ function validar(e){
       error=true;
       $("#mensaje").append("<p>La ciudad es un campo obligatorio</p>")
     }
+    if($("#mensajeContacto").length<1000){
+      error=true;
+      $("#mensaje").append("<p>Se ha excedido de caracteres</p>")
+    }
     if(error){//si error es verdadero que el envio se detenga
         e.preventDefault();
     }
@@ -59,34 +61,6 @@ function validarContacto(){
     error=true;
     $("#mensaje").append("<p>El nombre es obligatorio</p>")
   }
-  if(!$("#email").val().match(regexEmail)){
-    error=true;
-    $("#mensaje").append("<p>Ingrese un email válido</p>")
- }
- if(!$("#telefono").val().match(regexNumeros)){
-  error=true;
-  $("#mensaje").append("<p>Ingrese un telefono valido</p>")
-}
-if($("#mensajeContacto").length<1000){
-  error=true;
-  $("#mensaje").append("<p>Se ha excedido de caracteres</p>")
-}
-if(error){//si error es verdadero que el envio se detenga
-  e.preventDefault();
-}
-}
-
-$(document).ready(function(){
-  $("#filtro").click(function(){
-      filtrar();
-  });
-});
-
-function filtrar(){
-  const provincia=$("#opcionesProv").val();
-  const idioma=$("#opcionesIdioma").val();
-  $("#cursos article").hide();
-  $(`#cursos  .${provincia}.${idioma}`).show();
 }
 
 //localStorage: paso los datos de la home a inscripcion
@@ -117,3 +91,4 @@ $(document).ready(function(){
   $("#queHorario").text(localStorage.getItem("dato3"));
   $("#quePrecio").text(localStorage.getItem("dato4"));*/
   });
+   
